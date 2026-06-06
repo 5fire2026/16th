@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#0f5a2e">
+  <title>산책16기 초보강의노트</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fff8e8;
+      --ink: #1f2721;
+      --green: #0f5a2e;
+      --muted: #6d705d;
+      --line: rgba(15, 90, 46, 0.18);
+      --card: #fffdf6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 12% 4%, rgba(247, 199, 58, 0.22), transparent 24rem),
+        radial-gradient(circle at 90% 8%, rgba(16, 110, 66, 0.13), transparent 22rem),
+        var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+    }
+
+    .shell {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: max(18px, env(safe-area-inset-top)) 12px max(28px, env(safe-area-inset-bottom));
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      margin: -1px -12px 14px;
+      padding: 12px 14px 10px;
+      background: rgba(255, 248, 232, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--green);
+      font-size: clamp(18px, 5vw, 25px);
+      font-weight: 850;
+      letter-spacing: 0;
+      line-height: 1.24;
+      text-align: center;
+    }
+
+    .meta {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 650;
+      text-align: center;
+    }
+
+    .deck {
+      display: grid;
+      gap: 14px;
+    }
+
+    figure {
+      margin: 0;
+      padding: 0;
+      border-radius: 12px;
+      background: var(--card);
+      box-shadow: 0 8px 22px rgba(56, 44, 16, 0.12);
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: var(--card);
+    }
+
+    footer {
+      padding: 24px 4px 4px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <h1>산책16기 초보강의노트</h1>
+      <div class="meta">2026년 6월 5일 · 비견과 겁재 / 정재와 편재</div>
+    </header>
+
+    <section class="deck" aria-label="카드뉴스 이미지 목록">
+      <figure><img src="images/2026-06-05/01.png" alt="카드뉴스 1장" loading="eager"></figure>
+      <figure><img src="images/2026-06-05/02.png" alt="카드뉴스 2장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-05/03.png" alt="카드뉴스 3장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-05/04.png" alt="카드뉴스 4장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-05/05.png" alt="카드뉴스 5장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-05/06.png" alt="카드뉴스 6장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-05/07.png" alt="카드뉴스 7장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-05/08.png" alt="카드뉴스 8장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-05/09.png" alt="카드뉴스 9장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-05/10.png" alt="카드뉴스 10장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-05/11.png" alt="카드뉴스 11장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-05/12.png" alt="카드뉴스 12장" loading="lazy"></figure>
+    </section>
+
+    <footer>링크를 받은 멤버만 보기 쉽게 공유하기 위한 카드뉴스 페이지입니다.</footer>
+  </main>
+</body>
+</html>
