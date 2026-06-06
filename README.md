@@ -1,15 +1,18 @@
 # 산책16기 카드뉴스 공유 사이트
 
-이 폴더를 Netlify Drop 또는 Cloudflare Pages Direct Upload에 올리면 됩니다.
+이 폴더는 Cloudflare Pages와 GitHub 저장소로 자동 배포되는 카드뉴스 공유 사이트입니다.
 
 - 메인 파일: `index.html`
-- 이미지 경로: `images/2026-06-05/01.png` ~ `12.png`
+- 이미지 경로: `images/YYYY-MM-DD/01.png` ~ `12.png`
 - 검색 노출 방지: `noindex` 메타 태그, `robots.txt`, `X-Robots-Tag` 헤더 설정 포함
 
-## Netlify Drop
+## 새 카드뉴스 추가 규칙
 
-`outputs/cardnews-site` 폴더 전체를 Netlify Drop에 드래그 앤 드롭합니다.
+1. 강의 날짜로 폴더를 만듭니다. 예: `images/2026-06-12/`
+2. 카드뉴스 이미지를 `01.png` ~ `12.png` 형식으로 저장합니다.
+3. `index.html`의 날짜 목록과 이미지 경로를 새 날짜 폴더 기준으로 추가합니다.
+4. GitHub에 올리면 Cloudflare Pages가 자동으로 새 사이트를 배포합니다.
 
-## Cloudflare Pages
+## 현재 등록된 카드뉴스
 
-Direct Upload 또는 Pages 프로젝트의 업로드 대상으로 이 폴더를 사용합니다.
+- `2026-06-04` 비견과 겁재 / 정재와 편재

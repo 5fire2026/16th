@@ -74,6 +74,42 @@
       text-align: center;
     }
 
+    .archive {
+      display: grid;
+      gap: 8px;
+      margin: 0 0 14px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255, 253, 246, 0.78);
+      box-shadow: 0 6px 16px rgba(56, 44, 16, 0.08);
+    }
+
+    .archive-title {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 850;
+      text-align: center;
+    }
+
+    .archive a {
+      display: block;
+      padding: 11px 12px;
+      border: 1px solid rgba(15, 90, 46, 0.22);
+      border-radius: 999px;
+      background: #fffdf6;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 760;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .archive a[aria-current="page"] {
+      background: var(--green);
+      color: #fffdf6;
+    }
+
     .deck {
       display: grid;
       gap: 14px;
@@ -107,22 +143,27 @@
   <main class="shell">
     <header>
       <h1>산책16기 초보강의노트</h1>
-      <div class="meta">2026년 6월 5일 · 비견과 겁재 / 정재와 편재</div>
+      <div class="meta">2026년 6월 4일 · 비견과 겁재 / 정재와 편재</div>
     </header>
 
-    <section class="deck" aria-label="카드뉴스 이미지 목록">
-      <figure><img src="images/2026-06-05/01.png" alt="카드뉴스 1장" loading="eager"></figure>
-      <figure><img src="images/2026-06-05/02.png" alt="카드뉴스 2장" loading="lazy"></figure>
-      <figure><img src="images/2026-06-05/03.png" alt="카드뉴스 3장" loading="lazy"></figure>
-      <figure><img src="images/2026-06-05/04.png" alt="카드뉴스 4장" loading="lazy"></figure>
-      <figure><img src="images/2026-06-05/05.png" alt="카드뉴스 5장" loading="lazy"></figure>
-      <figure><img src="images/2026-06-05/06.png" alt="카드뉴스 6장" loading="lazy"></figure>
-      <figure><img src="images/2026-06-05/07.png" alt="카드뉴스 7장" loading="lazy"></figure>
-      <figure><img src="images/2026-06-05/08.png" alt="카드뉴스 8장" loading="lazy"></figure>
-      <figure><img src="images/2026-06-05/09.png" alt="카드뉴스 9장" loading="lazy"></figure>
-      <figure><img src="images/2026-06-05/10.png" alt="카드뉴스 10장" loading="lazy"></figure>
-      <figure><img src="images/2026-06-05/11.png" alt="카드뉴스 11장" loading="lazy"></figure>
-      <figure><img src="images/2026-06-05/12.png" alt="카드뉴스 12장" loading="lazy"></figure>
+    <nav class="archive" aria-label="강의 날짜별 카드뉴스 목록">
+      <div class="archive-title">강의 날짜별 카드뉴스</div>
+      <a href="#deck-2026-06-04" aria-current="page">2026년 6월 4일 · 비견과 겁재 / 정재와 편재</a>
+    </nav>
+
+    <section id="deck-2026-06-04" class="deck" aria-label="2026년 6월 4일 카드뉴스 이미지 목록">
+      <figure><img src="images/2026-06-04/01.png" alt="2026년 6월 4일 카드뉴스 1장" loading="eager"></figure>
+      <figure><img src="images/2026-06-04/02.png" alt="2026년 6월 4일 카드뉴스 2장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-04/03.png" alt="2026년 6월 4일 카드뉴스 3장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-04/04.png" alt="2026년 6월 4일 카드뉴스 4장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-04/05.png" alt="2026년 6월 4일 카드뉴스 5장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-04/06.png" alt="2026년 6월 4일 카드뉴스 6장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-04/07.png" alt="2026년 6월 4일 카드뉴스 7장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-04/08.png" alt="2026년 6월 4일 카드뉴스 8장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-04/09.png" alt="2026년 6월 4일 카드뉴스 9장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-04/10.png" alt="2026년 6월 4일 카드뉴스 10장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-04/11.png" alt="2026년 6월 4일 카드뉴스 11장" loading="lazy"></figure>
+      <figure><img src="images/2026-06-04/12.png" alt="2026년 6월 4일 카드뉴스 12장" loading="lazy"></figure>
     </section>
 
     <footer>링크를 받은 멤버만 보기 쉽게 공유하기 위한 카드뉴스 페이지입니다.</footer>
