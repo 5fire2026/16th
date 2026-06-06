@@ -115,6 +115,10 @@
       gap: 14px;
     }
 
+    .deck[hidden] {
+      display: none;
+    }
+
     figure {
       margin: 0;
       padding: 0;
@@ -186,5 +190,52 @@
 
     <footer>링크를 받은 멤버만 보기 쉽게 공유하기 위한 카드뉴스 페이지입니다.</footer>
   </main>
+  <script>
+    const archiveLinks = Array.from(document.querySelectorAll(".archive a"));
+    const decks = Array.from(document.querySelectorAll(".deck"));
+    const meta = document.querySelector(".meta");
+
+    function showDeck(deckId, shouldScroll = false) {
+      const selectedDeck = decks.find((deck) => deck.id === deckId) || decks[0];
+      const selectedLink = archiveLinks.find((link) => link.hash === `#${selectedDeck.id}`) || archiveLinks[0];
+
+      decks.forEach((deck) => {
+        deck.hidden = deck !== selectedDeck;
+      });
+
+      archiveLinks.forEach((link) => {
+        if (link === selectedLink) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+
+      if (meta) {
+        meta.textContent = selectedLink.textContent.trim();
+      }
+
+      if (location.hash !== `#${selectedDeck.id}`) {
+        history.replaceState(null, "", `#${selectedDeck.id}`);
+      }
+
+      if (shouldScroll) {
+        selectedDeck.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    archiveLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        showDeck(link.hash.slice(1), true);
+      });
+    });
+
+    window.addEventListener("hashchange", () => {
+      showDeck(location.hash.slice(1));
+    });
+
+    showDeck(location.hash.slice(1));
+  </script>
 </body>
 </html>
